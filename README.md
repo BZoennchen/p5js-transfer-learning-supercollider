@@ -20,7 +20,7 @@ The idea is to make it possible to use [p5js](https://p5js.org/) and machine lea
 2. Boot the SuperCollider server by executing the first line, i.e. ``s.boot``
 3. Execute the first and last code block to add the Synth and to listen to incoming OSC messages
 4. Run ``node socketServer.js`` to start the express webserver and to establish the websocket connections
-5. Go to ``http://localhost:3000/``
+5. Go to [http://localhost:3000/](http://localhost:3000/)
 6. Gather data for your two classes by clicking the buttons ``class1`` and ``class2``
 7. Train, i.e. fine-tune the model by clicking ``train``.
 8. After training the the p5js-sketch sends the prediction to the webserver which sends the message to SuperCollider.
