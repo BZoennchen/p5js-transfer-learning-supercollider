@@ -22,26 +22,6 @@ SynthDef(\fireworks,{
 ~fireworks.set(\decaytime, 0.3);
 ~fireworks.free();
 
-
-(
-OSCdef(
-    \getCoords,
-    {
-        arg val;
-		val.postln;
-        ~fireworks.set(\densityleft, val[1].linlin(0, 1, 0.1, 20));
-        ~fireworks.set(\densityright, val[2].linlin(0, 1, 0.1, 20));
-        ~fireworks.set(\freq, val[3].linlin(0, 1, 100, 700));
-        ~fireworks.set(\amp, val[4].linlin(0, 1, 0, 2));
-        ~fireworks.set(\decaytime, val[5].linlin(0, 1.0, 0.01, 1.0));
-        ~fireworks.set(\cutofffreq, val[6].linlin(0, 1, 200, 20000));
-    },
-    '/wek/outputs',
-    recvPort: 7448
-);
-)
-
-
 (
 OSCdef(
     \getClass,
