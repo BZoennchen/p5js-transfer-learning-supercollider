@@ -2,15 +2,22 @@ let express = require('express');
 let app = express();
 let server = app.listen(3000);
 
-let PORT_IN = 57121
-let PORT_OUT = 7448
+const PORT_IN = 57121
+const PORT_OUT = 7448
+const SERVER_PORT = 3000;
 
 app.use(express.static('public'))
 
 console.log("server is running");
 
 let socket = require('socket.io');
-let io = socket(server);
+
+let io = socket(server, {
+  cors: {
+    origin: 'http://localhost:'+SERVER_PORT,
+    methods: ["GET", "POST"]
+  }
+});
 
 function newConnection(socket) { 
     console.log('new connection: ' + socket.id);
