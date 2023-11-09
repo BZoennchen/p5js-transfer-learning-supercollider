@@ -17,7 +17,7 @@ The idea is to make it possible to use [p5js](https://p5js.org/) and machine lea
 ## Usage
 
 1. Start SuperCollider and open ``sc/firework.scd``,
-2. Boot the SuperCollider server by executing the first line
+2. Boot the SuperCollider server by executing the first line, i.e. ``s.boot``
 3. Execute the first and last code block to add the Synth and to listen to incoming OSC messages
 4. Run ``node socketServer.js`` to start the express webserver and to establish the websocket connections
 5. Go to ``http://localhost:3000/``
